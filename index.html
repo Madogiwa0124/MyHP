@@ -29,7 +29,7 @@
       }
       .footer {
           position: relative;
-          bottom: -200px;
+          bottom: -100px;
           width: 100%;
           /* Set the fixed height of the footer here */
           height: 60px;
@@ -132,16 +132,16 @@
         </div>
         <div class="collapse navbar-collapse target" id="menu">
             <ul class="nav navbar-nav">
-                <li><a class="menuItem">ABOUT</a></li>
+                <li><a class="menuItem" href="#about">ABOUT</a></li>
                 <li class="nav-divider"></li>
-                <li><a class="menuItem">MY_APPS</a></li>
+                <li><a class="menuItem" href="#myApps">MY_APPS</a></li>
                 <li class="nav-divider"></li>
-                <li><a class="menuItem">LINK</a></li>
+                <li><a class="menuItem" href="#link">LINK</a></li>
             </ul>
         </div>
     </nav>
-    <div class="container" >
-      <h2><span style="color:red">■</span>ABOUT</h2>
+    <div class="container" id="about">
+      <h2><span style="color:red">■</span> ABOUT</h2>
       <div class="contents">
         <p>このHPは、madogiwa0124が運営しております。</p>
         <p>主に作成したアプリ等を公開していこうと思います。</p>
@@ -161,7 +161,7 @@
       </div>
     </div>
     <hr>
-    <div class="container" >
+    <div class="container" id="myApps">
         <h2><span style="color:blue">■</span> MY_APPS</h2>
         <div class="contents">
             <div class="table-responsive">
@@ -181,7 +181,7 @@
         </div>
     </div>
     <hr>
-    <div class="container" >
+    <div class="container" id="link">
         <h2><span style="color:yellow">■</span> LINK</h2>
         <div class="contents">
             <p>工事中</p>
