@@ -1,200 +1,232 @@
 <!DOCTYPE html>
 <html lang="jn">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>窓際HP</title>
-    <!-- Bootstrap -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <style>
-      body{
-        font-family: "ヒラギノ角ゴ ProN W6", "Hiragino Kaku Gothic ProN",Meiryo,"ＭＳ Ｐゴシック","MS PGothic",sans-serif;
-        background-color: #fefefe;
-      }
-      h2{
-          font-weight: bold;
-      }
-      .menuItem{
-          font-weight: bold;
-      }
-      .contents{
-        padding-left: 40px;
-      }
-      #hpBrand{
-          font-size: 30px;
-          /*font-weight: bold;*/
-          color:#ffffff;
-      }
-      .footer {
-          position: relative;
-          bottom: -100px;
-          width: 100%;
-          /* Set the fixed height of the footer here */
-          height: 60px;
-          background-color: #02008b;
-      }
 
-      .container .text-muted {
-          margin: 20px 0;
-      }
-
-      .footer > .container {
-          padding-right: 15px;
-          padding-left: 15px;
-          padding-bottom: 0px;
-      }
-      .navbar-default {
-        background-color: #000a87;
-        border-color: #ffffff;
-      }
-      .navbar-default .navbar-brand {
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <title>窓際HP</title>
+  <!-- Bootstrap -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: "ヒラギノ角ゴ ProN W6", "Hiragino Kaku Gothic ProN", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+      background-color: #fefefe;
+    }
+    
+    h2 {
+      font-weight: bold;
+    }
+    
+    .menuItem {
+      font-weight: bold;
+    }
+    
+    .contents {
+      padding-left: 40px;
+    }
+    
+    #hpBrand {
+      font-size: 30px;
+      /*font-weight: bold;*/
+      color: #ffffff;
+    }
+    
+    .footer {
+      position: relative;
+      bottom: -100px;
+      width: 100%;
+      /* Set the fixed height of the footer here */
+      height: 60px;
+      background-color: #02008b;
+    }
+    
+    .container .text-muted {
+      margin: 20px 0;
+    }
+    
+    .footer > .container {
+      padding-right: 15px;
+      padding-left: 15px;
+      padding-bottom: 0px;
+    }
+    
+    .navbar-default {
+      background-color: #000a87;
+      border-color: #ffffff;
+    }
+    
+    .navbar-default .navbar-brand {
+      color: #ffffff;
+    }
+    
+    .navbar-default .navbar-brand:hover,
+    .navbar-default .navbar-brand:focus {
+      color: #000b5e;
+    }
+    
+    .navbar-default .navbar-text {
+      color: #ffffff;
+    }
+    
+    .navbar-default .navbar-nav > li > a {
+      color: #ffffff;
+    }
+    
+    .navbar-default .navbar-nav > li > a:hover,
+    .navbar-default .navbar-nav > li > a:focus {
+      color: #000b5e;
+      background-color: #ffffff;
+    }
+    
+    .navbar-default .navbar-nav > .active > a,
+    .navbar-default .navbar-nav > .active > a:hover,
+    .navbar-default .navbar-nav > .active > a:focus {
+      color: #000b5e;
+      background-color: #ffffff;
+    }
+    
+    .navbar-default .navbar-nav > .open > a,
+    .navbar-default .navbar-nav > .open > a:hover,
+    .navbar-default .navbar-nav > .open > a:focus {
+      color: #000b5e;
+      background-color: #ffffff;
+    }
+    
+    .navbar-default .navbar-toggle {
+      border-color: #ffffff;
+    }
+    
+    .navbar-default .navbar-toggle:hover,
+    .navbar-default .navbar-toggle:focus {
+      background-color: #ffffff;
+    }
+    
+    .navbar-default .navbar-toggle .icon-bar {
+      background-color: #ffffff;
+    }
+    
+    .navbar-default .navbar-collapse,
+    .navbar-default .navbar-form {
+      border-color: #ffffff;
+    }
+    
+    .navbar-default .navbar-link {
+      color: #ffffff;
+    }
+    
+    .navbar-default .navbar-link:hover {
+      color: #000b5e;
+    }
+    
+    @media (max-width: 767px) {
+      .navbar-default .navbar-nav .open .dropdown-menu > li > a {
         color: #ffffff;
       }
-      .navbar-default .navbar-brand:hover,
-      .navbar-default .navbar-brand:focus {
+      .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
+      .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
         color: #000b5e;
       }
-      .navbar-default .navbar-text {
-        color: #ffffff;
-      }
-      .navbar-default .navbar-nav > li > a {
-        color: #ffffff;
-      }
-      .navbar-default .navbar-nav > li > a:hover,
-      .navbar-default .navbar-nav > li > a:focus {
+      .navbar-default .navbar-nav .open .dropdown-menu > .active > a,
+      .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover,
+      .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
         color: #000b5e;
         background-color: #ffffff;
       }
-      .navbar-default .navbar-nav > .active > a,
-      .navbar-default .navbar-nav > .active > a:hover,
-      .navbar-default .navbar-nav > .active > a:focus {
-        color: #000b5e;
-        background-color: #ffffff;
-      }
-      .navbar-default .navbar-nav > .open > a,
-      .navbar-default .navbar-nav > .open > a:hover,
-      .navbar-default .navbar-nav > .open > a:focus {
-        color: #000b5e;
-        background-color: #ffffff;
-      }
-      .navbar-default .navbar-toggle {
-        border-color: #ffffff;
-      }
-      .navbar-default .navbar-toggle:hover,
-      .navbar-default .navbar-toggle:focus {
-        background-color: #ffffff;
-      }
-      .navbar-default .navbar-toggle .icon-bar {
-        background-color: #ffffff;
-      }
-      .navbar-default .navbar-collapse,
-      .navbar-default .navbar-form {
-        border-color: #ffffff;
-      }
-      .navbar-default .navbar-link {
-        color: #ffffff;
-      }
-      .navbar-default .navbar-link:hover {
-        color: #000b5e;
-      }
+    }
+  </style>
+</head>
 
-      @media (max-width: 767px) {
-        .navbar-default .navbar-nav .open .dropdown-menu > li > a {
-          color: #ffffff;
-        }
-        .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
-        .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
-          color: #000b5e;
-        }
-        .navbar-default .navbar-nav .open .dropdown-menu > .active > a,
-        .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover,
-        .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
-          color: #000b5e;
-          background-color: #ffffff;
-        }
-      }
-
-    </style>
-  </head>
-  <body>
-    <nav class="navbar navbar-default">
-        <div class="navbar-header">
-            <button class="navbar-toggle" data-toggle="collapse" data-target=".target">
+<body>
+  <nav class="navbar navbar-default">
+    <div class="navbar-header">
+      <button class="navbar-toggle" data-toggle="collapse" data-target=".target">
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-            <a class="navbar-brand" href="" id="hpBrand">
+      <a class="navbar-brand" href="" id="hpBrand">
                 窓際HP
             </a>
-        </div>
-        <div class="collapse navbar-collapse target" id="menu">
-            <ul class="nav navbar-nav">
-                <li><a class="menuItem" href="#about">ABOUT</a></li>
-                <li class="nav-divider"></li>
-                <li><a class="menuItem" href="#myApps">MY_APPS</a></li>
-                <li class="nav-divider"></li>
-                <li><a class="menuItem" href="#link">LINK</a></li>
-            </ul>
-        </div>
-    </nav>
-    <div class="container" id="about">
-      <h2><span style="color:red">■</span> ABOUT</h2>
-      <div class="contents">
-        <p>このHPは、madogiwa0124が運営しております。</p>
-        <p>主に作成したアプリ等を公開していこうと思います。</p>
-        <div calss="table-responsive">
-          <table class="table table-striped">
-            <tr><td>サイト名：窓際HP</td></tr>
-            <tr><td>アドレス：http://madogiwa0124.github.io/MyHP/</td></tr>
-            <tr><td>管理者：madogiwa0124</td></tr>
-          </table>
-        </div>
-        <p>CONTACT</p>
-        <div class="btn-group" role="group">
-            <button type="button" class="btn btn-info"    onclick="window.open('https://twitter.com/Madogiwa_Boy')">Twitter</button>
-	        <button type="button" class="btn btn-danger"  onclick="window.open('https://github.com/Madogiwa0124')">GitHub</button>
-            <button type="button" class="btn btn-warning" onclick="window.open('http://madogiwa0124.hatenablog.com/')">Blog</button>
-        </div>
+    </div>
+    <div class="collapse navbar-collapse target" id="menu">
+      <ul class="nav navbar-nav">
+        <li><a class="menuItem" href="#about">ABOUT</a></li>
+        <li class="nav-divider"></li>
+        <li><a class="menuItem" href="#myApps">MY_APPS</a></li>
+        <li class="nav-divider"></li>
+        <li><a class="menuItem" href="#link">LINK</a></li>
+      </ul>
+    </div>
+  </nav>
+  <div class="container" id="about">
+    <h2><span style="color:red">■</span> ABOUT</h2>
+    <div class="contents">
+      <p>このHPは、madogiwa0124が運営しております。</p>
+      <p>主に作成したアプリ等を公開していこうと思います。</p>
+      <div calss="table-responsive">
+        <table class="table table-striped">
+          <tr>
+            <td>サイト名：窓際HP</td>
+          </tr>
+          <tr>
+            <td>アドレス：http://madogiwa0124.github.io/MyHP/</td>
+          </tr>
+          <tr>
+            <td>管理者：madogiwa0124</td>
+          </tr>
+        </table>
+      </div>
+      <p>CONTACT</p>
+      <div class="btn-group" role="group">
+        <button type="button" class="btn btn-info" onclick="window.open('https://twitter.com/Madogiwa_Boy')">Twitter</button>
+        <button type="button" class="btn btn-danger" onclick="window.open('https://github.com/Madogiwa0124')">GitHub</button>
+        <button type="button" class="btn btn-warning" onclick="window.open('http://madogiwa0124.hatenablog.com/')">Blog</button>
       </div>
     </div>
-    <hr>
-    <div class="container" id="myApps">
-        <h2><span style="color:blue">■</span> MY_APPS</h2>
-        <div class="contents">
-            <div class="table-responsive">
-              <table class="table table-hover table-bordered table-striped">
-                <tr class="default">
-                     <th>#</th>
-                     <th>Title</th>
-                     <th>Description</th>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td><a href = "http://madogiwa0124.github.io/KeywordMixer/" target="_blank">キーワードミキサー</a></td>
-                    <td>2つのワードをランダムで表示し、そこから導き出したアイデアを投稿出来るwebサービスです。</td>
-                </tr>
-              </table>
-            </div>
-        </div>
+  </div>
+  <hr>
+  <div class="container" id="myApps">
+    <h2><span style="color:blue">■</span> MY_APPS</h2>
+    <div class="contents">
+      <div class="table-responsive">
+        <table class="table table-hover table-bordered table-striped">
+          <tr class="default">
+            <th>#</th>
+            <th>Title</th>
+            <th>Description</th>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td><a href="http://madogiwa0124.github.io/KeywordMixer/" target="_blank">キーワードミキサー</a></td>
+            <td>2つのワードをランダムで表示し、そこから導き出したアイデアを投稿出来るwebサービスです。</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td><a href="http://madogiwa0124.github.io/TaskBorder/" target="_blank">TaskBorder</a></td>
+            <td>タスクスケジュール看板を元にしたタスク管理ツールです。</td>
+          </tr>
+        </table>
+      </div>
     </div>
-    <hr>
-    <div class="container" id="link">
-        <h2><span style="color:yellow">■</span> LINK</h2>
-        <div class="contents">
-            <p>工事中</p>
-        </div>
+  </div>
+  <hr>
+  <div class="container" id="link">
+    <h2><span style="color:yellow">■</span> LINK</h2>
+    <div class="contents">
+      <p>工事中</p>
     </div>
-    <footer class="footer">
-        <div class="container">
-            <p class="text-muted" style="color:#ffffff;">Copyright © 2016 窓際少年 All Rights Reserved</p>
-        </div>
-    </footer>
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.min.js"></script>
-  </body>
+  </div>
+  <footer class="footer">
+    <div class="container">
+      <p class="text-muted" style="color:#ffffff;">Copyright © 2016 窓際少年 All Rights Reserved</p>
+    </div>
+  </footer>
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="js/bootstrap.min.js"></script>
+</body>
+
 </html>
