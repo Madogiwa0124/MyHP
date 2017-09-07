@@ -1,4 +1,5 @@
-apps = [
+// 作成したアプリケーションのリスト
+var apps = [
   {
     name: 'キーワードミキサー',
     url: 'http://madogiwa0124.github.io/KeywordMixer/',
@@ -36,6 +37,7 @@ apps = [
   },
 ]
 
+// MyApps用HTML生成メソッド
 function createAppHtml(appInfo) {
   // 親要素の作成
   var element = document.createElement('div');
@@ -53,20 +55,25 @@ function createAppHtml(appInfo) {
 
   // 作成した子要素を親要素へ格納
   element.appendChild(childElement);
+
   return element;
-//   <div class="col-md-3">
-//   <div class="app">
-//     <img src = "images/myapps/ruby_study_bot.png">
-//     <p>
-//       Ruby勉強bot<br>
-//       https://twitter.com/ruby_study_bot
-//     </p>
-//   </div>
-// </div>
 }
+
+// ページ読み込み時の処理
 window.onload = function () {
-  console.log("aaa");
+  // My Appsを生成
   apps.forEach(function (appInfo) {
     document.getElementById("myapps").appendChild(createAppHtml(appInfo));
+  });
+  // 最新BLOG記事取得
+  $.ajax({
+    url: 'http://madogiwa0124.hatenablog.com/',
+    dataType: 'html'
+  })
+  .done(function (data) {
+    var blogs = $(data).find('.recent-entries-item');
+    blogs.each(function () {
+      $('#blog').append($(this));
+    });
   });
 }
