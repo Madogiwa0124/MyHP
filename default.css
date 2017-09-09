@@ -1,4 +1,20 @@
-/* common */
+/* ====================== 
+           common 
+   ===================== */
+
+body{
+  font-family: "Mplus 1p";
+}
+h2{
+  font-size: 50px;
+  font-weight: normal;
+}
+h3{
+  font-weight: normal;
+}
+footer{
+  margin-bottom: 20px;
+}
 .center{
   text-align: center;
 }
@@ -8,33 +24,49 @@
 .right{
   text-align: right;
 }
-
-/* main */
-body{
-  font-family: "Mplus 1p";
-}
-
-h2{
-  font-size: 50px;
-  font-weight: normal;
-}
-
 .subtitle{
   border-bottom: 3px #150341;
 }
 
-h3{
-  font-weight: normal;
+/* ====================== 
+           top 
+   ===================== */
+.top{
+  margin: 0px;
+  padding: 0px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("images/top.jpg");
+  width:100%;
 }
-
-
-.element{
-  padding: 10px;
+.top h1{
+  padding: 50px;
+  margin: 0px;
+  text-align: center;
+  font-size: 150px;
+  word-wrap: break-word;
+  color: white; 
+  text-shadow: lightgray 1px 1px 0px, lightgray -1px 1px 0px,
+               lightgray 1px -1px 0px, lightgray -1px -1px 0px;
 }
-.bio ul{
+@media (max-width: 768px) {
+  .top h1{
+    padding: 20px;
+    margin: 0px;
+    text-align: center;
+    font-size: 35px;
+    word-wrap: break-word;
+    color: white; 
+    text-shadow: lightgray 1px 1px 0px, lightgray -1px 1px 0px,
+                 lightgray 1px -1px 0px, lightgray -1px -1px 0px;  }
+}
+/* ====================== 
+           about 
+   ===================== */
+.bio .contact{
   list-style-type: none
 }
-.bio li{
+.bio .contact{
   font-size: 20px;
   margin: 5px 0px;
 }
@@ -43,25 +75,9 @@ h3{
   height: 30px;
 }
 
-.top{
-  margin: 0px;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-image: url("images/top.jpg");
-  height: 500px;
-  width:100%;
-}
-.top h1{
-  text-align: center;
-  font-size: 120px;
-  margin: 0px;
-  color: white; 
-  height:500px;
-  line-height:500px;
-  text-shadow: lightgray 1px 1px 0px, lightgray -1px 1px 0px,
-               lightgray 1px -1px 0px, lightgray -1px -1px 0px;
-}
-
+/* ====================== 
+           apps 
+   ===================== */
 .icon{
   font-size: 100px;
 }
@@ -88,6 +104,40 @@ h3{
 }
 
 .app p a{
+  text-decoration: none;
+  color: #FFFFFF;
+}
+
+/* ====================== 
+           Blogs 
+   ===================== */
+#blogs li {
+  position: relative;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  padding: 0px;
+  border: 1px solid #AAAAAA;
+}
+
+#blogs .recent-entries{
+  list-style: none;
+}
+
+#blogs img{
+  width: 100%;
+}
+
+#blogs a{
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  margin: 0px;
+  padding: 5px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #FFFFFF;
+}
+
+#blogs a{
   text-decoration: none;
   color: #FFFFFF;
 }

@@ -41,21 +41,39 @@ var apps = [
 function createAppHtml(appInfo) {
   // 親要素の作成
   var element = document.createElement('div');
-  element.className = "col-md-3";
-  
+  element.className = "col-md-3 col-xs-6";
   // 子要素の作成
   var childElement = document.createElement('div');
   childElement.className = 'app'
+  // 画像リンクを作成
+  var a = document.createElement('a');
+  a.href = appInfo.url;
+  a.target = "_blank";
   var image = document.createElement('img');
   image.src = appInfo.src;
+  a.appendChild(image);
+  // 文字リンクを作成
   var p = document.createElement('p')
   p.innerHTML = appInfo.name + '<br><a href="' + appInfo.url + '">' + appInfo.url + '</a>';
-  childElement.appendChild(image);
+  // 子要素に作成した要素を反映
+  childElement.appendChild(a);
   childElement.appendChild(p);
-
-  // 作成した子要素を親要素へ格納
+  // 作成した子要素を親要素へ格納し返却
   element.appendChild(childElement);
+  return element;
+}
 
+// Blog用HTML生成メソッド
+function createBlogHtml(element, index) {
+  // Classの設定
+  element.className = 'col-md-2 col-xs-5';
+  // 最初の要素のみクラスを追加
+  element.className += (index == 1 ? ' col-md-offset-1 ' : '');
+  // 子要素の生成
+  var image = document.createElement('img');
+  image.src = 'images/hatenablog.png';
+  // 作成した子要素を親要素へ格納し返却
+  element.appendChild(image);
   return element;
 }
 
@@ -65,15 +83,21 @@ window.onload = function () {
   apps.forEach(function (appInfo) {
     document.getElementById("myapps").appendChild(createAppHtml(appInfo));
   });
-  // 最新BLOG記事取得
+  // BlogのHTMLを取得
   $.ajax({
     url: 'http://madogiwa0124.hatenablog.com/',
     dataType: 'html'
   })
   .done(function (data) {
-    var blogs = $(data).find('.recent-entries-item');
-    blogs.each(function () {
-      $('#blog').append($(this));
+    // 最新の記事の部分を抽出
+    var blogs = $(data).find('.recent-entries');
+    // 抽出した要素の整形
+    var index = 1;
+    blogs.find('.recent-entries-item').each(function () {
+      createBlogHtml(this, index);
+      index++;
     });
+    // HPに埋め込み
+    $('#blogs').append(blogs);
   });
 }
