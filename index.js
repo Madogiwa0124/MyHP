@@ -1,42 +1,3 @@
-// 作成したアプリケーションのリスト
-var apps = [
-  {
-    name: 'キーワードミキサー',
-    url: 'http://madogiwa0124.github.io/KeywordMixer/',
-    src: 'images/myapps/keywordmixer.png'
-  },
-  {
-    name: 'TaskBorder',
-    url: 'https://madogiwa0124.github.io/TaskBorder/',
-    src: 'images/myapps/taskborder.png'
-  },
-  {
-    name: 'rubyで言語処理100本ノック',
-    url: 'https://gist.github.com/Madogiwa0124/3c388b8570052b9269fd6022beb7cc6e',
-    src: 'images/myapps/ruby100nock.png'
-  },
-  {
-    name: 'Facebookクローンアプリ',
-    url: 'https://thawing-brushlands-32817.herokuapp.com/',
-    src: 'images/myapps/facebook_clone.png'
-  },
-  {
-    name: 'ruby勉強bot',
-    url: 'https://twitter.com/ruby_study_bot',
-    src: 'images/myapps/ruby_study_bot.png'
-  },
-  {
-    name: 'ページ更新管理ツール Moook',
-    url: 'https://moook.herokuapp.com',
-    src: 'images/myapps/moook.png'
-  },
-  {
-    name: '教えてgoo!スクレイピングツール',
-    url: 'https://gist.github.com/Madogiwa0124/6863fdde58c12e7403724c6055df75a5',
-    src: 'images/myapps/oshiete_goo.png'
-  },
-]
-
 // MyApps用HTML生成メソッド
 function createAppHtml(appInfo) {
   // 親要素の作成
@@ -45,21 +6,28 @@ function createAppHtml(appInfo) {
   // 子要素の作成
   var childElement = document.createElement('div');
   childElement.className = 'app'
-  // 画像リンクを作成
+  // 画像を作成
+  var image = document.createElement('img');
+  image.src = appInfo.src;
+  // 文字リンクを作成
   var a = document.createElement('a');
   a.href = appInfo.url;
   a.target = "_blank";
-  var image = document.createElement('img');
-  image.src = appInfo.src;
-  a.appendChild(image);
-  // 文字リンクを作成
   var p = document.createElement('p')
-  p.innerHTML = appInfo.name + '<br><a href="' + appInfo.url + '">' + appInfo.url + '</a>';
+  p.innerHTML = appInfo.name + '<br>' + appInfo.url;
+  a.appendChild(p)
   // 子要素に作成した要素を反映
+  childElement.appendChild(image);
   childElement.appendChild(a);
-  childElement.appendChild(p);
   // 作成した子要素を親要素へ格納し返却
   element.appendChild(childElement);
+  // マウスオーバーの際に説明欄を広げる
+  element.addEventListener('mouseover', function () {
+    this.querySelector('p').classList.add('link_open');
+  });
+  element.addEventListener('mouseout', function () {
+    this.querySelector('p').classList.remove('link_open')
+  });
   return element;
 }
 
@@ -77,12 +45,31 @@ function createBlogHtml(element, index) {
   return element;
 }
 
+// 各要素の高さを揃える
+function makeEvenHeight(elements) {
+  // スキルの各要素の高さを取得
+  var elements_size = [];
+  Array.prototype.forEach.call(elements, function (element) {
+    elements_size.push(element.clientHeight);
+  });
+  // スキルの各要素の高さを最大値に揃える
+  Array.prototype.forEach.call(elements, function (element) {
+    element.style.height = Math.max.apply(null, elements_size) + "px";
+  });
+}
+
 // ページ読み込み時の処理
 window.onload = function () {
+  // スキルの各要素を取得
+  var skills = document.getElementsByClassName("skill");
+  // 要素の高さを揃える
+  makeEvenHeight(skills);
+
   // My Appsを生成
   apps.forEach(function (appInfo) {
     document.getElementById("myapps").appendChild(createAppHtml(appInfo));
   });
+
   // BlogのHTMLを取得
   $.ajax({
     url: 'http://madogiwa0124.hatenablog.com/',

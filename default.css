@@ -4,6 +4,7 @@
 
 body{
   font-family: "Mplus 1p";
+  background-color: #FCFCFC;
 }
 h2{
   font-size: 50px;
@@ -76,6 +77,15 @@ footer{
 }
 
 /* ====================== 
+           skills 
+   ===================== */
+.skill{
+  background-color: #FFFFFF;
+  border-radius: 10px;
+  padding: 5px;
+}
+
+/* ====================== 
            apps 
    ===================== */
 .icon{
@@ -84,7 +94,6 @@ footer{
 
 .app{
   position: relative;
-  border: 1px solid #DDDDDD;
   margin: 10px;
 }
 .app img{
@@ -101,6 +110,14 @@ footer{
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+}
+
+.link_open{
+  height: 100%;
+  overflow: visible;
+  white-space: normal !important;
+  word-wrap: break-word !important;
+  text-overflow: clip !important;
 }
 
 .app p a{
