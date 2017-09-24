@@ -75,22 +75,4 @@ window.onload = function () {
   apps.forEach(function (appInfo) {
     document.getElementById("myapps").appendChild(createAppHtml(appInfo));
   });
-
-  // BlogのHTMLを取得
-  // $.ajax({
-  //   url: 'http://madogiwa0124.hatenablog.com/',
-  //   dataType: 'html'
-  // })
-  // .done(function (data) {
-  //   // 最新の記事の部分を抽出
-  //   var blogs = $(data).find('.recent-entries');
-  //   // 抽出した要素の整形
-  //   var index = 1;
-  //   blogs.find('.recent-entries-item').each(function () {
-  //     createBlogHtml(this, index);
-  //     index++;
-  //   });
-  //   // HPに埋め込み
-  //   $('#blogs').append(blogs);
-  // });
 }
