@@ -22,12 +22,18 @@ function createAppHtml(appInfo) {
   // 作成した子要素を親要素へ格納し返却
   element.appendChild(childElement);
   // マウスオーバーの際に説明欄を広げる
-  element.addEventListener('mouseover', function () {
-    this.querySelector('p').classList.add('link_open');
-  });
-  element.addEventListener('mouseout', function () {
-    this.querySelector('p').classList.remove('link_open')
-  });
+  $(element).hover(
+    function () {
+      var target = this.querySelector('p')
+      target.classList.add('link_open');
+      $(target).animate({ height: "100%" });
+    },
+    function () {
+      var target = this.querySelector('p')
+      target.classList.remove('link_open');
+      $(target).animate({ height: "30%" });
+    }
+  );
   return element;
 }
 
