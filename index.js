@@ -21,7 +21,7 @@ function createAppHtml(appInfo) {
   childElement.appendChild(a);
   // 作成した子要素を親要素へ格納し返却
   element.appendChild(childElement);
-  // マウスオーバーの際に説明欄を広げる
+  // マウスオーバー時に説明欄を広げる
   $(element).hover(
     function () {
       var target = this.querySelector('p')
