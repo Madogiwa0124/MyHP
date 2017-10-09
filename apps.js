@@ -35,4 +35,9 @@ var apps = [
     url: 'https://gist.github.com/Madogiwa0124/6863fdde58c12e7403724c6055df75a5',
     src: 'images/myapps/oshiete_goo.png'
   },
+  {
+    name: '褒めてくれるコンソールアプリ HomeRuby',
+    url: 'https://github.com/Madogiwa0124/HomeRuby',
+    src: 'images/myapps/homeruby.png'
+  },
 ]
