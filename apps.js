@@ -44,5 +44,10 @@ var apps = [
     name: 'Moook Reader',
     url: 'https://github.com/Madogiwa0124/Moook.FrontEnd',
     src: 'images/myapps/moook_front.png'
+  },
+  {
+    name: 'GoogleTranslateCmd',
+    url: 'https://github.com/Madogiwa0124/GoogleTranslateCmd',
+    src: 'images/myapps/google_translate_cmd.png'
   }
 ]
