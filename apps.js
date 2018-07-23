@@ -54,5 +54,10 @@ var apps = [
     name: 'はてなブログAPIで記事一覧を取得するスクリプト',
     url: 'https://gist.github.com/Madogiwa0124/45874f00149015292d0174b19565d7ea#file-get_hatena_blog_entrys-rb',
     src: 'images/myapps/hatena_blog_API.png'
+  },
+  {
+    name: 'Quiz共有サービス QuiQ',
+    url: 'https://quiz-quiq.herokuapp.com/quizzes',
+    src: 'images/myapps/quiq.jpeg'
   }
 ]
