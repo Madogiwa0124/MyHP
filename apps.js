@@ -59,5 +59,10 @@ var apps = [
     name: 'Quiz共有サービス QuiQ',
     url: 'https://quiz-quiq.herokuapp.com/quizzes',
     src: 'images/myapps/quiq.jpeg'
+  },
+  {
+    name: 'より見やすい標準出力RubyGem spp',
+    url: 'https://github.com/Madogiwa0124/spp',
+    src: 'images/myapps/spp.png'
   }
 ]
