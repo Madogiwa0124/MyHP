@@ -64,5 +64,10 @@ var apps = [
     name: 'より見やすい標準出力RubyGem spp',
     url: 'https://github.com/Madogiwa0124/spp',
     src: 'images/myapps/spp.png'
-  }
+  },
+  {
+    name: '今日やるべきことがわかるカロリー計算アプリ「CalCalorie」',
+    url: 'https://madogiwa0124.github.io/CalCalorie/',
+    src: 'images/myapps/calcalorie.png'
+  },
 ]
