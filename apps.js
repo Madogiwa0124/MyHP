@@ -70,4 +70,9 @@ var apps = [
     url: 'https://madogiwa0124.github.io/CalCalorie/',
     src: 'images/myapps/calcalorie.png'
   },
+  {
+    name: 'ゴミの日リマンドBot',
+    url: 'https://github.com/Madogiwa0124/gomi_remainder_bot',
+    src: 'images/myapps/gomi_remander_bot.png'
+  },
 ]
