@@ -75,4 +75,9 @@ var apps = [
     url: 'https://github.com/Madogiwa0124/gomi_remainder_bot',
     src: 'images/myapps/gomi_remander_bot.png'
   },
+  {
+    name: 'rails勉強bot',
+    url: 'https://mobile.twitter.com/rails_study_bot',
+    src: 'images/myapps/rails_study_bot.png'
+  },
 ]
