@@ -16,11 +16,6 @@ var apps = [
     src: 'images/myapps/ruby100nock.png'
   },
   {
-    name: 'Facebookクローンアプリ',
-    url: 'https://thawing-brushlands-32817.herokuapp.com/',
-    src: 'images/myapps/facebook_clone.png'
-  },
-  {
     name: 'ruby勉強bot',
     url: 'https://twitter.com/ruby_study_bot',
     src: 'images/myapps/ruby_study_bot.png'
@@ -39,11 +34,6 @@ var apps = [
     name: '褒めてくれるコンソールアプリ HomeRuby',
     url: 'https://github.com/Madogiwa0124/HomeRuby',
     src: 'images/myapps/homeruby.png'
-  },
-  {
-    name: 'Moook Reader',
-    url: 'https://github.com/Madogiwa0124/Moook.FrontEnd',
-    src: 'images/myapps/moook_front.png'
   },
   {
     name: 'GoogleTranslateCmd',
@@ -79,5 +69,10 @@ var apps = [
     name: 'rails勉強bot',
     url: 'https://mobile.twitter.com/rails_study_bot',
     src: 'images/myapps/rails_study_bot.png'
+  },
+  {
+    name: 'MultiTabMarkdownEditor',
+    url: 'https://github.com/Madogiwa0124/multi-tab-markdown',
+    src: 'images/myapps/multi_tab_markdown.png'
   },
 ]
