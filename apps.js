@@ -72,7 +72,12 @@ var apps = [
   },
   {
     name: 'MultiTabMarkdownEditor',
-    url: 'https://github.com/Madogiwa0124/multi-tab-markdown',
+    url: 'https://madogiwa0124.github.io/multi-tab-markdown/dist/index.html',
     src: 'images/myapps/multi_tab_markdown.png'
+  },
+  {
+    name: 'Rssをまとめて共有出来るサービス Dogfeeds',
+    url: 'https://dogfeeds.herokuapp.com/',
+    src: 'images/myapps/dogfeeds.png'
   },
 ]
